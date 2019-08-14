@@ -1,10 +1,13 @@
 import Vue from "vue";
+import BootstrapVue from 'bootstrap-vue';
 import HelloComponent from "./components/HelloRoute/Hello.vue";
 import HelloDecoratorComponent from "./components/HelloRoute/HelloDecorator.vue";
 import AboutUsComponent from "./components/AboutUsRoute/AboutUs.vue";
 import AboutUsDecoratorComponent from "./components/AboutUsRoute/AboutUsDecorator.vue";
 import NavigationComponent from "./components/NavigationBar/nav.vue";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+Vue.use(BootstrapVue);
 
 let v = new Vue({
     el: "#app",
