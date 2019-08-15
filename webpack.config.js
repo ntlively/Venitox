@@ -39,6 +39,10 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.css$/,
+        loader:[ 'vue-style-loader', 'css-loader' ]
       }
     ]
   },

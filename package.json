@@ -16,10 +16,13 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@types/jasmine": "^3.4.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.28",
     "jasmine": "^3.4.0",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.1.0",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.1.2",
+    "vue-style-loader": "^4.1.2"
   },
   "devDependencies": {
     "@types/jest": "^23.3.2",

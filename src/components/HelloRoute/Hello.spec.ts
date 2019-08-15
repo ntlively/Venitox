@@ -1,4 +1,4 @@
-import Hello from '@/components/Hello.vue';
+import Hello from '@/components/HelloRoute/Hello.vue';
 import { mount } from '@vue/test-utils';
 
 describe('Hello.vue', () => {
