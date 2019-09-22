@@ -248,7 +248,7 @@ let v = new Vue({
     el: "#app",
     template: `
     <div>
-        <div>Hello {{name}}!</div>
+        <div>Home {{name}}!</div>
         Name: <input v-model="name" type="text">
     </div>`,
     data: {
@@ -276,7 +276,7 @@ Create an `index.html` with the following content at your root:
 
 Now run `npm run build` and open up your `index.html` file in a browser.
 
-You should see some text that says `Hello World!`.
+You should see some text that says `Home World!`.
 Below that, you'll see a textbox.
 If you change the content of the textbox, you'll notice how the text is synchronized between the two.
 
@@ -295,14 +295,14 @@ For more complex tasks, Vue is flexible in that it supports breaking your applic
 A Vue component can be declared in the following manner:
 
 ```ts
-// src/components/Hello.ts
+// src/components/Home.ts
 
 import Vue from "vue";
 
 export default Vue.extend({
     template: `
         <div>
-            <div>Hello {{name}}{{exclamationMarks}}</div>
+            <div>Home {{name}}{{exclamationMarks}}</div>
             <button @click="decrement">-</button>
             <button @click="increment">+</button>
         </div>
@@ -340,19 +340,19 @@ Our root Vue instance can consume it as follows:
 // src/index.ts
 
 import Vue from "vue";
-import HelloComponent from "./components/Hello";
+import HomeComponent from "./components/Home";
 
 let v = new Vue({
     el: "#app",
     template: `
     <div>
         Name: <input v-model="name" type="text">
-        <hello-component :name="name" :initialEnthusiasm="5" />
+        <Home-component :name="name" :initialEnthusiasm="5" />
     </div>
     `,
     data: { name: "World" },
     components: {
-        HelloComponent
+        HomeComponent
     }
 });
 ```
@@ -392,11 +392,11 @@ To leverage that within `.vue` files, we recommend using [Visual Studio Code](ht
 Now, let's write an SFC!
 
 ```html
-<!-- src/components/Hello.vue -->
+<!-- src/components/Home.vue -->
 
 <template>
     <div>
-        <div class="greeting">Hello {{name}}{{exclamationMarks}}</div>
+        <div class="greeting">Home {{name}}{{exclamationMarks}}</div>
         <button @click="decrement">-</button>
         <button @click="increment">+</button>
     </div>
@@ -441,19 +441,19 @@ and let's import it for our root instance:
 // src/index.ts
 
 import Vue from "vue";
-import HelloComponent from "./components/Hello.vue";
+import HomeComponent from "./components/Home.vue";
 
 let v = new Vue({
     el: "#app",
     template: `
     <div>
         Name: <input v-model="name" type="text">
-        <hello-component :name="name" :initialEnthusiasm="5" />
+        <Home-component :name="name" :initialEnthusiasm="5" />
     </div>
     `,
     data: { name: "World" },
     components: {
-        HelloComponent
+        HomeComponent
     }
 });
 ```
@@ -477,7 +477,7 @@ With the help of two additional packages, ([vue-class-component](https://github.
 import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
-export default class HelloDecorator extends Vue {
+export default class HomeDecorator extends Vue {
     @Prop() name!: string;
     @Prop() initialEnthusiasm!: number;
 

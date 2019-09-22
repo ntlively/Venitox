@@ -10,7 +10,8 @@
         <!-- Create A NAV ITEM for each route we have registered -->
         <b-nav-item v-for="routes in links" 
             v-bind:key="routes.id"
-            :to="`${routes.page}`">{{routes.text}}
+            :to="`${routes.page}`">
+              {{routes.text}}    
         </b-nav-item>
      </b-navbar-nav>
 
@@ -35,8 +36,8 @@ export default {
       links: [
         {
           id: 0,
-          text: 'Hello',
-          page:'/Hello'
+          text: 'Home',
+          page:'/Home'
         },
         {
           id: 1,

@@ -1,16 +1,16 @@
-import Hello from '@/components/HelloRoute/Hello.vue';
+import Home from '@/components/HomeRoute/Home.vue';
 import { mount } from '@vue/test-utils';
 
-describe('Hello.vue', () => {
+describe('Home.vue', () => {
   it('should render', () => {
     const name = 'World';
     const initialEnthusiasm = 5;
 
-    const wrapper = mount(Hello, {
+    const wrapper = mount(Home, {
       propsData: {
         name, initialEnthusiasm
       }
     })
-    expect(wrapper.find('.greeting').text()).toBe('Hello World!!!!!')
+    expect(wrapper.find('.greeting').text()).toBe('Home World!!!!!')
   })
 });

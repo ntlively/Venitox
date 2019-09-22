@@ -1,8 +1,8 @@
-<!-- src/components/HomeRoute/HelloDecorator.vue -->
-<!-- This is an alternative way to define the Hello component using decorators -->
+<!-- src/components/HomeRoute/HomeDecorator.vue -->
+<!-- This is an alternative way to define the Home component using decorators -->
 <template>
     <div>
-        <div class="greeting">Hello {{name}}{{exclamationMarks}}</div>
+        <div class="greeting">Home {{name}}{{exclamationMarks}}</div>
         <button @click="decrement">-</button>
         <button @click="increment">+</button>
     </div>
@@ -12,7 +12,7 @@
 import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
-export default class HelloDecorator extends Vue {
+export default class HomeDecorator extends Vue {
     @Prop() name!: string;
     @Prop() initialEnthusiasm!: number;
 

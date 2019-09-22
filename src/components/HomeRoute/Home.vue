@@ -1,7 +1,7 @@
-<!-- src/components/AboutUs.vue -->
+<!-- src/components/HomeRoute/Home.vue -->
 <template>
     <div>
-        <div class="greeting">AboutUs</div>
+        <div class="greeting">Home</div>
     </div>
 </template>
 

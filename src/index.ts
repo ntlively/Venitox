@@ -1,30 +1,31 @@
 import Vue from "vue";
 import BootstrapVue from 'bootstrap-vue';
-import HelloComponent from "./components/HelloRoute/Hello.vue";
-import HelloDecoratorComponent from "./components/HelloRoute/HelloDecorator.vue";
+import router from './router';
+
+import HomeComponent from "./components/HomeRoute/Home.vue";
+import HomeDecoratorComponent from "./components/HomeRoute/HomeDecorator.vue";
 import AboutUsComponent from "./components/AboutUsRoute/AboutUs.vue";
 import AboutUsDecoratorComponent from "./components/AboutUsRoute/AboutUsDecorator.vue";
 import NavigationComponent from "./components/NavigationBar/nav.vue";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+
 Vue.use(BootstrapVue);
 
 let v = new Vue({
     el: "#app",
+    router,
     template: `
     <div>
         <NavigationComponent></NavigationComponent>
-        Name: <input v-model="name" type="text">
-        <h1>Hello Component</h1>
-        <hello-component :name="name" :initialEnthusiasm="5" />
-        <h1>Hello Decorator Component</h1>
-        <hello-decorator-component :name="name" :initialEnthusiasm="5" />
+        <router-view></router-view>
     </div>
     `,
     data: { name: "World" },
     components: {
-        HelloComponent,
-        HelloDecoratorComponent,
+        HomeComponent,
+        HomeDecoratorComponent,
         AboutUsComponent,
         AboutUsDecoratorComponent,
         NavigationComponent
